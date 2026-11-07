@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{cite}
+
+\title{Taller de tipos de requisitos (FORM-TL-01)}
+\author{Cristopher Lavayen}
+\date{7 de Noviembre del 2026}
+
+\begin{document}
+\maketitle
+
+\section{Clasificación de Enunciados}
+\begin{table}[htpb]
+\centering
+\renewcommand{\arraystretch}{1.5} % Da un poco de espacio vertical a las celdas
+\begin{tabular}{|c|p{3.5cm}|c|c|p{5cm}|}
+\hline
+\textbf{Código} & \textbf{Tipo (ISO 25010)} & \textbf{Prod/Proc} & \textbf{Sist/Soft} & \textbf{Justificación} \\
+\hline
+E01 & Funcional & Producto & Software & Describe una acción directa que el paciente ejecutará en la plataforma. \\
+\hline
+E02 & Funcional & Producto & Software & Define un comportamiento automático de notificación del aplicativo. \\
+\hline
+E03 & Calidad (Eficiencia de desempeño) & Producto & Software & Especifica una característica de rendimiento, redactada de forma vaga. \\
+\hline
+E04 & Funcional & Producto & Software & Detalla una interacción de ingreso de datos del recepcionista. \\
+\hline
+E05 & Restricción & Producto & Software & Impone una limitación tecnológica obligatoria sobre el stack de desarrollo. \\
+\hline
+\end{tabular}
+\caption{Clasificación de los enunciados E01 al E05}
+\label{tab:clasificacion}
+\end{table}
+
+\section{Requisitos Cuantificados}
+% Aquí irán los 5 requisitos de calidad reescritos con métricas y umbrales
+
+\section{Discrepancias y Resolución}
+% Aquí se anotarán las diferencias discutidas con tu compañero
+
+\bibliographystyle{ieeetr}
+\bibliography{referencias}
+\end{document}
