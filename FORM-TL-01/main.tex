@@ -2,42 +2,69 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{cite}
+\usepackage{longtable} 
 
-\title{Taller de tipos de requisitos (FORM-TL-01)}
+\title {Taller de tipos de requisitos (FORM-TL-01) \\ 
+\vspace{0.3cm} 
+\large {Plataforma de gestión de citas médicas}}
 \author{Cristopher Lavayen}
-\date{7 de Noviembre del 2026}
+\date{7 de Noviembre de 2026}
 
 \begin{document}
 \maketitle
 
 \section{Clasificación de Enunciados}
-\begin{table}[htpb]
-\centering
-\renewcommand{\arraystretch}{1.5} % Da un poco de espacio vertical a las celdas
-\begin{tabular}{|c|p{3.5cm}|c|c|p{5cm}|}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|c|p{3.5cm}|c|c|p{5cm}|}
+\caption{Clasificación de los enunciados E01 al E20}
+\label{tab:clasificacion} \\
 \hline
 \textbf{Código} & \textbf{Tipo (ISO 25010)} & \textbf{Prod/Proc} & \textbf{Sist/Soft} & \textbf{Justificación} \\
 \hline
-E01 & Funcional & Producto & Software & Describe una acción directa que el paciente ejecutará en la plataforma. \\
+\endfirsthead
+
+\multicolumn{5}{c}{{\tablename\ \thetable{} -- Continuación de la página anterior}} \\
 \hline
-E02 & Funcional & Producto & Software & Define un comportamiento automático de notificación del aplicativo. \\
+\textbf{Código} & \textbf{Tipo (ISO 25010)} & \textbf{Prod/Proc} & \textbf{Sist/Soft} & \textbf{Justificación} \\
 \hline
-E03 & Calidad (Eficiencia de desempeño) & Producto & Software & Especifica una característica de rendimiento, redactada de forma vaga. \\
+\endhead
+
 \hline
-E04 & Funcional & Producto & Software & Detalla una interacción de ingreso de datos del recepcionista. \\
+\endfoot
+
 \hline
-E05 & Restricción & Producto & Software & Impone una limitación tecnológica obligatoria sobre el stack de desarrollo. \\
-\hline
-\end{tabular}
-\caption{Clasificación de los enunciados E01 al E05}
-\label{tab:clasificacion}
-\end{table}
+\endlastfoot
+
+
+E01 & Funcional & Producto & Software & Describe una acción directa que el paciente ejecutará en la plataforma. \\ \hline
+E02 & Funcional & Producto & Software & Define un comportamiento automático de notificación del aplicativo. \\ \hline
+E03 & Calidad (Eficiencia de desempeño) & Producto & Software & Especifica una característica de rendimiento, redactada de forma vaga. \\ \hline
+E04 & Funcional & Producto & Software & Detalla una interacción de ingreso de datos del recepcionista. \\ \hline
+E05 & Restricción & Producto & Software & Impone una limitación tecnológica obligatoria sobre el stack de desarrollo. \\ \hline
+
+E06 & Funcional & Producto & Software & Permite al médico visualizar información y actualizar el estado de una cita. \\ \hline
+E07 & Calidad (Seguridad) & Producto & Software & Establece una protección de información, redactada vagamente. \\ \hline
+E08 & Restricción & Producto & Software & Condiciona la compatibilidad tecnológica obligatoria de la app móvil. \\ \hline
+E09 & Funcional & Producto & Software & Implementa una regla de negocio para penalizar cancelaciones tardías. \\ \hline
+E10 & Calidad (Usabilidad) & Producto & Software & Define la facilidad de uso, redactada vagamente para adultos mayores. \\ \hline
+
+E11 & Restricción & Proceso & Sistema & Establece un límite de tiempo (6 meses) para la ejecución del proyecto. \\ \hline
+E12 & Funcional & Producto & Software & Define un comportamiento automático de cierre de sesión por inactividad. \\ \hline
+E13 & Funcional & Producto & Sistema & Describe una interacción que involucra hardware físico (quiosco, impresora). \\ \hline
+E14 & Calidad (Fiabilidad) & Producto & Software & Especifica una exigencia de disponibilidad del servicio, redactada vagamente. \\ \hline
+E15 & Funcional & Producto & Software & Permite al director médico generar un reporte consolidado de inasistencias. \\ \hline
+
+E16 & Restricción & Proceso & Sistema & Define el ciclo de vida iterativo y de validación del proyecto. \\ \hline
+E17 & Restricción & Producto & Sistema & Impone cumplimiento normativo y legal sobre la plataforma. \\ \hline
+E18 & Calidad (Compatibilidad) & Producto & Software & Exige interoperabilidad, redactada de forma vaga ("sin problemas"). \\ \hline
+E19 & Calidad (Fiabilidad) & Producto & Software & Métrica específica de recuperación ante fallos del servidor. \\ \hline
+E20 & Restricción & Proceso & Software & Establece una regla de calidad obligatoria en el flujo de desarrollo. \\
+\end{longtable}
 
 \section{Requisitos Cuantificados}
-% Aquí irán los 5 requisitos de calidad reescritos con métricas y umbrales
 
 \section{Discrepancias y Resolución}
-% Aquí se anotarán las diferencias discutidas con tu compañero
 
 \bibliographystyle{ieeetr}
 \bibliography{referencias}
