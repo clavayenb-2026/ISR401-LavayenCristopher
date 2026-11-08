@@ -4,7 +4,7 @@
 \usepackage{cite}
 \usepackage{longtable} 
 
-\title {Taller de tipos de requisitos (FORM-TL-01) \\ 
+\title{Taller de tipos de requisitos (FORM-TL-01) \\ 
 \vspace{0.3cm} 
 \large {Plataforma de gestión de citas médicas}}
 \author{Cristopher Lavayen}
@@ -13,7 +13,7 @@
 \begin{document}
 \maketitle
 
-\section{Clasificación de Enunciados}
+\section*{1. Clasificación de Enunciados}
 
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{|c|p{3.5cm}|c|c|p{5cm}|}
@@ -36,25 +36,21 @@
 \hline
 \endlastfoot
 
-
 E01 & Funcional & Producto & Software & Describe una acción directa que el paciente ejecutará en la plataforma. \\ \hline
 E02 & Funcional & Producto & Software & Define un comportamiento automático de notificación del aplicativo. \\ \hline
 E03 & Calidad (Eficiencia de desempeño) & Producto & Software & Especifica una característica de rendimiento, redactada de forma vaga. \\ \hline
 E04 & Funcional & Producto & Software & Detalla una interacción de ingreso de datos del recepcionista. \\ \hline
 E05 & Restricción & Producto & Software & Impone una limitación tecnológica obligatoria sobre el stack de desarrollo. \\ \hline
-
 E06 & Funcional & Producto & Software & Permite al médico visualizar información y actualizar el estado de una cita. \\ \hline
 E07 & Calidad (Seguridad) & Producto & Software & Establece una protección de información, redactada vagamente. \\ \hline
 E08 & Restricción & Producto & Software & Condiciona la compatibilidad tecnológica obligatoria de la app móvil. \\ \hline
 E09 & Funcional & Producto & Software & Implementa una regla de negocio para penalizar cancelaciones tardías. \\ \hline
 E10 & Calidad (Usabilidad) & Producto & Software & Define la facilidad de uso, redactada vagamente para adultos mayores. \\ \hline
-
 E11 & Restricción & Proceso & Sistema & Establece un límite de tiempo (6 meses) para la ejecución del proyecto. \\ \hline
 E12 & Funcional & Producto & Software & Define un comportamiento automático de cierre de sesión por inactividad. \\ \hline
 E13 & Funcional & Producto & Sistema & Describe una interacción que involucra hardware físico (quiosco, impresora). \\ \hline
 E14 & Calidad (Fiabilidad) & Producto & Software & Especifica una exigencia de disponibilidad del servicio, redactada vagamente. \\ \hline
 E15 & Funcional & Producto & Software & Permite al director médico generar un reporte consolidado de inasistencias. \\ \hline
-
 E16 & Restricción & Proceso & Sistema & Define el ciclo de vida iterativo y de validación del proyecto. \\ \hline
 E17 & Restricción & Producto & Sistema & Impone cumplimiento normativo y legal sobre la plataforma. \\ \hline
 E18 & Calidad (Compatibilidad) & Producto & Software & Exige interoperabilidad, redactada de forma vaga ("sin problemas"). \\ \hline
@@ -62,9 +58,9 @@ E19 & Calidad (Fiabilidad) & Producto & Software & Métrica específica de recup
 E20 & Restricción & Proceso & Software & Establece una regla de calidad obligatoria en el flujo de desarrollo. \\
 \end{longtable}
 
-\section{Requisitos Cuantificados}
+\section*{2. Requisitos Cuantificados}
 
-Los siguientes enunciados tienen cietos problemas de verificabilidad y sobretodo son muy ambiguos.Los he reescrito incorporando metricas y umbrales solicitados basandome en el contexto que se desarrolla el sistema:
+Los siguientes enunciados tienen ciertos problemas de verificabilidad y sobre todo son muy ambiguos. Los he reescrito incorporando métricas y umbrales solicitados basándome en el contexto en que se desarrolla el sistema:
 
 \begin{enumerate}
     \item \textbf{E03 (Rápida) $\rightarrow$ Eficiencia de desempeño:} 
@@ -83,8 +79,16 @@ Los siguientes enunciados tienen cietos problemas de verificabilidad y sobretodo
     La plataforma debe conectarse con los servicios web del sistema de facturación externo con una tasa de éxito de transmisión del 99.5\% y un tiempo máximo de respuesta de 2 segundos por transacción.
 \end{enumerate}
 
-\section{Discrepancias y Resolución}
+\section*{3. Discrepancias y Resolución}
 
-\bibliographystyle{ieeetr}
-\bibliography{referencias}
+Tras comparar la tabla de clasificación con el repositorio de mi compañero Jonathan Holguín, registramos la siguiente diferencia de criterio:
+
+\begin{itemize}
+    \item \textbf{Enunciado en debate:} E18 (Integración con el sistema de facturación).
+    \item \textbf{Mi criterio inicial:} Nivel \textbf{Software}, al considerar que la conexión es puramente lógica mediante servicios web.
+    \item \textbf{Criterio del compañero:} Nivel \textbf{Sistema}, argumentando que es una cualidad de la solución en uso que abarca cómo trabajan juntos dos sistemas completos.
+    \item \textbf{Resolución argumentada:} Tras debatirlo, acordamos que la clasificación más precisa es \textbf{Sistema}. La interoperabilidad trasciende el código de nuestra aplicación y requiere que ambas infraestructuras (la plataforma nueva y el sistema externo) interactúen exitosamente en el entorno real para procesar los cobros.
+\end{itemize}
+
+\end{thebibliography}
 \end{document}
